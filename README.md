@@ -2,10 +2,6 @@
 > **Hackathon project** — End-to-end behavioral analytics pipeline answering: *"Which user behaviors and workflows are most predictive of long-term success on Zerve?"*
 
 **Dataset:** 409,287 events · 4,774 users · Sep–Dec 2025 (99 days)  
-
-
-# 🚀 User Retention & Churn Prediction System
-
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Model](https://img.shields.io/badge/Model-XGBoost-orange)
 ![Pipeline](https://img.shields.io/badge/ML%20Pipeline-End--to--End-purple)
@@ -13,7 +9,6 @@
 ![Lift](https://img.shields.io/badge/Lift-3.4x-green)
 ![Status](https://img.shields.io/badge/Production-Ready-success)
 
-> A production-grade machine learning system that predicts early-stage user retention within the first 48 hours of signup and enables automated, evidence-based intervention strategies for product teams.
 
 ---
 
@@ -42,28 +37,4 @@ This system analyzes **first 48-hour behavioral signals** to:
 
 ## 🏗️ System Architecture
 
-```mermaid
-flowchart TD
 
-A[Raw Event Logs] --> B[Data Cleaning & Noise Filtering]
-B --> C[Feature Engineering (First 48 Hours)]
-C --> D[Dataset Labeling & Construction]
-D --> E[XGBoost Model Training]
-E --> F[Cross-Validation & Evaluation]
-F --> G[Scoring Engine]
-
-G --> H1[Critical Users]
-G --> H2[At-Risk Users]
-G --> H3[Monitor Users]
-
-H1 --> I1[In-App Activation Prompt]
-H2 --> I2[Email + Template Recommendations]
-H3 --> I3[Retention Campaigns]
-
-I1 --> J[User Behavior Tracking]
-I2 --> J
-I3 --> J
-
-J --> K[Monitoring Dashboard]
-K --> L[Drift Detection System]
-L --> E
